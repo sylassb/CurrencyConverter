@@ -9,6 +9,7 @@ import com.sylas.currencyconverter.util.Resource
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
+import kotlin.math.round
 
 class MainViewModel @ViewModelInject constructor(
     private val repository: MainRepository,
@@ -46,7 +47,7 @@ class MainViewModel @ViewModelInject constructor(
                     if(rate == null) {
                         _conversion.value = CurrencyEvent.Failure("Unexpected error")
                     } else {
-                        val convertedCurrency = kotlin.math.round(fromAmount * rate * 100) / 100
+                        val convertedCurrency = round(fromAmount * rate * 100) / 100
                         _conversion.value = CurrencyEvent.Success(
                             "$fromAmount $fromCurrency = $convertedCurrency $toCurrency"
                         )
@@ -57,63 +58,38 @@ class MainViewModel @ViewModelInject constructor(
     }
 
     private fun getRateForCurrency(currency: String, rates: Rates) = when (currency) {
-            "AED" -> rates.AED
-            "AFN" -> rates.AFN
-            "ALL" -> rates.ALL
-            "AMD" -> rates.AMD
-            "ANG" -> rates.ANG
-            "AOA" -> rates.AOA
-            "ARS" -> rates.ARS
-            "AUD" -> rates.AUD
-            "AWG" -> rates.AWG
-            "AZN" -> rates.AZN
-            "BAM" -> rates.BAM
-            "BBD" -> rates.BBD
-            "BDT" -> rates.BDT
-            "BGN" -> rates.BGN
-            "BHD" -> rates.BHD
-            "BIF" -> rates.BIF
-            "BMD" -> rates.BMD
-            "BND" -> rates.BND
-            "BOB" -> rates.BOB
-            "BRL" -> rates.BRL
-            "BSD" -> rates.BSD
-            "BTC" -> rates.BTC
-            "BTN" -> rates.BTN
-            "BWP" -> rates.BWP
-            "BYN" -> rates.BYN
-            "BYR" -> rates.BYR
-            "BZD" -> rates.BZD
-            "CAD" -> rates.CAD
-            "CDF" -> rates.CDF
-            "CHF" -> rates.CHF
-            "CLF" -> rates.CLF
-            "CLP" -> rates.CLP
-            "CNY" -> rates.CNY
-            "COP" -> rates.COP
-            "CRC" -> rates.CRC
-            "CUC" -> rates.CUC
-            "CUP" -> rates.CUP
-            "CVE" -> rates.CVE
-            "CZK" -> rates.CZK
-            "DJF" -> rates.DJF
-            "DKK" -> rates.DKK
-            "DOP" -> rates.DOP
-            "DZD" -> rates.DZD
-            "EGP" -> rates.EGP
-            "ERN" -> rates.ERN
-            "ETB" -> rates.ETB
-            "EUR" -> rates.EUR
-            "FJD" -> rates.FJD
-            "FKP" -> rates.FKP
-            "GBP" -> rates.GBP
-            "JPY" -> rates.JPY
-            "KHR" -> rates.KHR
-            "NZD" -> rates.NZD
-            "RSD" -> rates.RSD
-            "RUB" -> rates.RUB
-            "USD" -> rates.USD
-            "ZAR" -> rates.ZAR
+        "CAD" -> rates.cAD
+        "HKD" -> rates.hKD
+        "ISK" -> rates.iSK
+        "EUR" -> rates.eUR
+        "PHP" -> rates.pHP
+        "DKK" -> rates.dKK
+        "HUF" -> rates.hUF
+        "CZK" -> rates.cZK
+        "AUD" -> rates.aUD
+        "RON" -> rates.rON
+        "SEK" -> rates.sEK
+        "IDR" -> rates.iDR
+        "INR" -> rates.iNR
+        "BRL" -> rates.bRL
+        "RUB" -> rates.rUB
+        "HRK" -> rates.hRK
+        "JPY" -> rates.jPY
+        "THB" -> rates.tHB
+        "CHF" -> rates.cHF
+        "SGD" -> rates.sGD
+        "PLN" -> rates.pLN
+        "BGN" -> rates.bGN
+        "CNY" -> rates.cNY
+        "NOK" -> rates.nOK
+        "NZD" -> rates.nZD
+        "ZAR" -> rates.zAR
+        "USD" -> rates.uSD
+        "MXN" -> rates.mXN
+        "ILS" -> rates.iLS
+        "GBP" -> rates.gBP
+        "KRW" -> rates.kRW
+        "MYR" -> rates.mYR
         else -> null
     }
 }

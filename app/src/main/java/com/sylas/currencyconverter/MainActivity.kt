@@ -38,7 +38,6 @@ class MainActivity : AppCompatActivity() {
                         binding.progressBar.isVisible = false
                         binding.tvResult.setTextColor(Color.BLACK)
                         binding.tvResult.text = event.resultText
-
                     }
                     is MainViewModel.CurrencyEvent.Failure -> {
                         binding.progressBar.isVisible = false
