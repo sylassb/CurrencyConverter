@@ -3,8 +3,6 @@ Desafio Carrefour Android Developer (MVVM CurrencyConverter App)
 
 Description [...]
 
-Description [...]
-
 Presentation Arch
 - MVVM
 
