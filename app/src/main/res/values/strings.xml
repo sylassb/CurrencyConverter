@@ -1,62 +1,9 @@
 <resources>
     <string name="app_name">CurrencyConverter</string>
     <string-array name="currency_codes">
-        <item>AED</item>
-        <item>AFN</item>
-        <item>ALL</item>
-        <item>AMD</item>
-        <item>ANG</item>
-        <item>AOA</item>
-        <item>ARS</item>
         <item>AUD</item>
-        <item>AWG</item>
-        <item>AZN</item>
-        <item>BAM</item>
-        <item>BBD</item>
-        <item>BDT</item>
-        <item>BGN</item>
-        <item>BHD</item>
-        <item>BIF</item>
-        <item>BMD</item>
-        <item>BND</item>
-        <item>BOB</item>
         <item>BRL</item>
-        <item>BSD</item>
-        <item>BTC</item>
-        <item>BTN</item>
-        <item>BWP</item>
-        <item>BYN</item>
-        <item>BYR</item>
-        <item>BZD</item>
-        <item>CAD</item>
-        <item>CDF</item>
-        <item>CHF</item>
-        <item>CLF</item>
-        <item>CLP</item>
-        <item>CNY</item>
-        <item>COP</item>
-        <item>CRC</item>
-        <item>CUC</item>
-        <item>CUP</item>
-        <item>CVE</item>
-        <item>CZK</item>
-        <item>DJF</item>
-        <item>DKK</item>
-        <item>DOP</item>
-        <item>DZD</item>
-        <item>EGP</item>
-        <item>ERN</item>
-        <item>ETB</item>
         <item>EUR</item>
-        <item>FJD</item>
-        <item>FKP</item>
-        <item>GBP</item>
-        <item>JPY</item>
-        <item>KHR</item>
-        <item>NZD</item>
-        <item>RSD</item>
-        <item>RUB</item>
         <item>USD</item>
-        <item>ZAR</item>
     </string-array>
 </resources>
