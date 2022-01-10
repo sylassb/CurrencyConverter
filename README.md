@@ -7,6 +7,10 @@ The goal of this project is to create a Currency Conversion App, going through t
 
 <b><i>Description</b></i>
 
+Following instructions from the challenge proposed by Digital Innovation One, I built an app seeking to introduce architectural design pattern MVVM. The main objective of the challenge is to consume an API to access real-time currency conversion rates. For this I used a Free API that makes available the conversion rates published by the European Central Bank https://exchangeratesapi.io/. As a challenge I also used the Dagger-Hilt library for dependency injection.
+
+<b>Technologies used</b>
+
 Presentation Arch
 - MVVM
 
