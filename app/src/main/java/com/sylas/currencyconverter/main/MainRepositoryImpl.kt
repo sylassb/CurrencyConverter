@@ -5,7 +5,7 @@ import com.sylas.currencyconverter.data.models.CurrencyResponse
 import com.sylas.currencyconverter.util.Resource
 import javax.inject.Inject
 
-class DefaultMainRepository @Inject constructor(
+class MainRepositoryImpl @Inject constructor(
     private val api: CurrencyApi
 ) : MainRepository {
 

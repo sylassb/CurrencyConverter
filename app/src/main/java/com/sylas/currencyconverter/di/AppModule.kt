@@ -1,7 +1,7 @@
 package com.sylas.currencyconverter.di
 
 import com.sylas.currencyconverter.data.CurrencyApi
-import com.sylas.currencyconverter.main.DefaultMainRepository
+import com.sylas.currencyconverter.main.MainRepositoryImpl
 import com.sylas.currencyconverter.main.MainRepository
 import com.sylas.currencyconverter.util.DispatcherProvider
 import dagger.Module
@@ -30,7 +30,7 @@ object AppModule {
 
     @Singleton
     @Provides
-    fun provideMainRepository(api: CurrencyApi): MainRepository = DefaultMainRepository(api)
+    fun provideMainRepository(api: CurrencyApi): MainRepository = MainRepositoryImpl(api)
 
     @Singleton
     @Provides
